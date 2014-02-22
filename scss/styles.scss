@@ -1,0 +1,155 @@
+// Font -- Open Sans Google Font
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+
+// Config
+
+@import 'reset';
+@import 'vars';
+@import 'grid';
+@import 'helpers';
+
+// Doc Styles
+
+body {
+  background: $off-white;
+  height: 100%;
+  position: relative;
+}
+
+// Typography
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: $main-type;
+}
+
+h1, h4 {
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 100;
+}
+
+p {
+  margin-top: 10px;
+}
+
+a {
+  color: $teal;
+  text-decoration: none;
+}
+
+
+
+// Modules
+
+// Header
+
+.m-header {
+  width: 100%;
+  background: $teal-transparent url(../img/header.jpg) fixed;
+  border-top: 8px solid $black;
+  padding: 50px 0px;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: inherit;
+    content: ' ';
+  }
+}
+
+.m-header__wrap {
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+// Search Field
+
+.m-search {
+  text-align: center;
+  top: -25px;
+  position: relative;
+  font-family: $main-type;
+  input {
+    padding: 15px 0px 15px 15px;
+    max-width: 400px;
+    width: 40%;
+    border: 0;
+    border: 1px solid #ccc;
+
+  }
+  button {
+    padding: 15px;
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+    &:hover {
+      background-color: $teal;
+      border-color: $teal;
+    }
+  }
+}
+
+// Content
+
+.m-content {
+  @extend %grid;
+  width: 95%;
+  background-color: $off-white;
+  padding: 50px 0px;
+  margin: 0 auto;
+}
+
+.m-content__filter {
+  @extend %grid-u-1-5;
+  padding: 50px;
+}
+
+.m-content__results {
+  @extend %grid-u-3-5;
+  padding: 50px;
+  
+  .tag {
+    background: $teal;
+    padding: 5px 8px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 12px;
+    &:hover {
+      background: $teal-transparent;
+    }
+  }
+}
+
+.m-content__result {
+  margin-bottom: 70px;
+}
+
+// Footer
+
+.m-footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 20px 0px;
+  bottom: 0;
+}
