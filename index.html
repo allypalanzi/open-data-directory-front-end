@@ -8,6 +8,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="stylesheets/styles.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
 
@@ -15,7 +16,7 @@
     <div class="m-header__wrap clearfix">
       <div class="m-header__words">
         <h1>Open Data Directory</h1>
-        <h4>Some information about what this is. Nullam posuere turpis a risus posuere faucibus. Aliquam eget ipsum tristique, imperdiet libero nec, elementum urna. Aliquam rutrum velit nec tincidunt varius.</h4>
+        <h4>Search for open data across multiple cities, states, countries, organizations, topics, etc. Want to make Open Data Directory better? Contribute to us on GitHub <a href="#">here</a>!</h4>
       </div>
       <div class="m-header__image">
         <img src="img/monitor.svg">
@@ -24,50 +25,58 @@
   </header>
 
   <form class="m-search">
-    <input type="text" placeholder="search for datasets, api’s, blah blah" required=""><button type="submit"><img src="img/search.png"></button>
+    <input type="text" placeholder="what data are you looking for?" required=""><button type="submit"><img src="img/search.png"></button>
   </form>
 
   <section class="m-content">
-    <div class="m-content__filter">
-      filter all the things
+    <div class="m-content__filter" id="filters">
+      <ul>
+        <h3>Filter by:</h3>
+        <li>Agriculture</li>
+        <li>Consumer</li>
+        <li>Education</li>
+        <li>Energy</li>
+        <li>Finance</li>
+        <li>Geospatial</li>
+        <li>Global Development</li>
+        <li>Health</li>
+        <li>Jobs &amp; Skills</li>
+        <li>Public Safety</li>
+        <li>Science &amp; Research</li>
+        <li>Weather</li>
+        <li>Business</li>
+        <li>Ethics</li>
+        <li>Law</li>
+        <li>Manufacturing</li>
+        <li>Ocean</li>
+      </ul>
     </div>
     <div class="m-content__results">
       <div class="m-content__result">
-        <h2><a href="#">Title of Dataset</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere turpis a risus posuere faucibus. Aliquam eget ipsum tristique, imperdiet libero nec, elementum urna. Aliquam rutrum velit nec tincidunt varius.</p>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
+        <h2><a href="#">Higher Education School Locations</a></h2>
+        <p>State of North Dakota — These points were created by Geocoding the street addresses as they were published by each institution. Attribute data was developed from information provided by each institution.</p>
+        <a class="tag" href="">HTML</a>
       </div>
 
       <div class="m-content__result">
-        <h2><a href="#">Title of Dataset</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere turpis a risus posuere faucibus. Aliquam eget ipsum tristique, imperdiet libero nec, elementum urna. Aliquam rutrum velit nec tincidunt varius.</p>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
+        <h2><a href="#">DemoEducation_TOWNEDUC</a></h2>
+        <p>Vermont Center for Geographic Information — Town level education data for Vermont. Initial funding for much of this data was provided by the Vermont Forum on Indicators Online (VFOS). VCGI has collected and and added additional items to enhance the initial dataset.</p>
+        <a class="tag" href="">HTML</a>
       </div>
 
       <div class="m-content__result">
-        <h2><a href="#">Title of Dataset</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere turpis a risus posuere faucibus. Aliquam eget ipsum tristique, imperdiet libero nec, elementum urna. Aliquam rutrum velit nec tincidunt varius.</p>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
+        <h2><a href="#">Educational Institutions 2007-2008</a></h2>
+        <p>Kansas Data Access and Support Center — This data set provides locational data and student/faculty populations for schools in Kansas.</p>
+        <a class="tag" href="">HTML</a>
+        <a class="tag" href="">TXT</a>
       </div>
 
       <div class="m-content__result">
-        <h2><a href="#">Title of Dataset</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere turpis a risus posuere faucibus. Aliquam eget ipsum tristique, imperdiet libero nec, elementum urna. Aliquam rutrum velit nec tincidunt varius.</p>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
-        <a class="tag" href="">tag</a>
+        <h2><a href="#">U.S. Department of Education: Speeches</a></h2>
+        <p>Department of Education — Subscribe to this RSS feed to receive notification of speeches from education officials at the U.S. Department of Education (ED).</p>
+        <a class="tag" href="">XML</a>
       </div>
-      <div class="m-pagination"> <a><< 1 2 3 ... 5 >></a></div>
+      <div class="m-pagination"> <a href="#"><<</a> <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">>></a></div>
     </div>
 
   </section>
@@ -75,6 +84,6 @@
   <footer class="m-footer">
     <p>Created at <a href="http://dc.opendataday.org/">Open Data Day DC 2014</a></p>
   </footer>
-  
+  <script type="text/javascript" src="js/all.js"></script>
 </body>
 </html>

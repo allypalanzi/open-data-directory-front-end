@@ -34,6 +34,7 @@ h1 {
 
 h2 {
   margin-bottom: 0;
+  font-size: 30px;
   a {
     border-bottom: 1px solid $main;
     &:hover {
@@ -80,6 +81,14 @@ a {
     top: 0; right: 0; bottom: 0; left: 0;
     background-color: inherit;
     content: ' ';
+  }
+  a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    &:hover {
+      color: #111;
+      border-color: #111;
+    }
   }
 }
 
@@ -149,6 +158,25 @@ a {
 .m-content__filter {
   @extend %grid-u-1-5;
   padding: 50px;
+  font-family: $main-type;
+  ul {
+    list-style: none;
+    cursor: pointer;
+    li {
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-top: 5px;
+      @include transition (background, .2s, ease-in-out);
+    }
+  }
+}
+
+.selected {
+  background-color: $main;
+  color: #fff;
+  @include transition (background, .2s, ease-in-out);
+
 }
 
 .m-content__results {
