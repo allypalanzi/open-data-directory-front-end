@@ -47,7 +47,7 @@ p {
 }
 
 a {
-  color: $teal;
+  color: $main;
   text-decoration: none;
 }
 
@@ -59,7 +59,7 @@ a {
 
 .m-header {
   width: 100%;
-  background: $teal-transparent url(../img/header.jpg) fixed;
+  background: $main-transparent url(../img/header.svg) fixed;
   border-top: 8px solid $black;
   padding: 50px 0px;
   position: relative;
@@ -72,11 +72,27 @@ a {
 }
 
 .m-header__wrap {
-  width: 95%;
-  max-width: 800px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  width: 70%;
+  @media(max-width: $break-medium) {
+    width: 95%;
+    text-align: center;
+  }
+}
+
+.m-header__words {
+  display: inline-block;
+  padding: 50px;
+  h1,h4 {
+    max-width: 600px;
+  }
+}
+
+.m-header__image {
+  display: inline-block;
+  padding: 20px 0px;
 }
 
 // Search Field
@@ -100,8 +116,8 @@ a {
     border: 1px solid #000;
     color: #fff;
     &:hover {
-      background-color: $teal;
-      border-color: $teal;
+      background-color: $main;
+      border-color: $main;
     }
   }
 }
@@ -126,14 +142,14 @@ a {
   padding: 50px;
   
   .tag {
-    background: $teal;
+    background: $main;
     padding: 5px 8px;
     color: #fff;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 12px;
     &:hover {
-      background: $teal-transparent;
+      background: $main-transparent;
     }
   }
 }
