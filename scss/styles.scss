@@ -34,6 +34,14 @@ h1 {
 
 h2 {
   margin-bottom: 0;
+  a {
+    border-bottom: 1px solid $main;
+    &:hover {
+      color: #111;
+      border-bottom: 1px solid #111;
+      @include transition (color, .2s, ease-in-out);
+    }
+  }
 }
 
 h4 {
@@ -49,6 +57,10 @@ p {
 a {
   color: $main;
   text-decoration: none;
+  &:hover {
+    color: #111;
+    @include transition (color, .2s, ease-in-out);
+  }
 }
 
 
@@ -112,12 +124,14 @@ a {
   }
   button {
     padding: 15px;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #111;
+    border: 1px solid #111;
     color: #fff;
+    @include transition (background, .2s, ease-in-out);
     &:hover {
       background-color: $main;
       border-color: $main;
+      @include transition (background, .2s, ease-in-out);
     }
   }
 }
@@ -149,7 +163,8 @@ a {
     text-transform: uppercase;
     font-size: 12px;
     &:hover {
-      background: $main-transparent;
+      background: #111;
+      @include transition (background, .2s, ease-in-out);
     }
   }
 }
@@ -162,10 +177,15 @@ a {
 
 .m-footer {
   width: 100%;
-  background-color: #000;
+  background-color: #111;
   color: #fff;
   text-align: center;
   position: relative;
   padding: 20px 0px;
   bottom: 0;
+  a {
+    &:hover {
+      color: #fff;
+    }
+  }
 }
